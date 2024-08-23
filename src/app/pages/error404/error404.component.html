@@ -1,0 +1,13 @@
+<div class="container text-center error-container">
+  <!-- Mensaje de error 404 -->
+  <h1 class="error-code">404</h1>
+  <p class="error-message">{{ errorMensaje }}</p>
+
+  <!-- Imagen de error -->
+  <img [src]="errorImagen" alt="Imagen de error 404" class="error-image">
+
+  <!-- Botón para regresar a la página principal -->
+  <a routerLink="/" class="btn btn-primary error-button">Volver al Inicio</a>
+</div>
+
+

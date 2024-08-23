@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "nombre": "Ibuprofeno",
+    "imagen": "assets/images/ibu.jpg",
+    "descripcion": "Patillas para el malestar del cuerpo",
+    "precio": 0.99
+  },
+  {
+    "id": "2",
+    "nombre": "Paracetamol",
+    "imagen": "assets/images/ibu1.jpg",
+    "descripcion": "Para la fiebre de niños y adultos",
+    "precio": 2.99
+  },
+  {
+    "id": "3",
+    "nombre": "Loratadina",
+    "imagen": "assets/images/ibu3.jpg",
+    "descripcion": "Para la alergia de cualquier tipo",
+    "precio": 4.99
+  },
+  {
+    "id": "4",
+    "nombre": "Tempra",
+    "imagen": "assets/images/ibu.jpg",
+    "descripcion": "Fiebre de bebes",
+    "precio": 8.99
+  }
+]

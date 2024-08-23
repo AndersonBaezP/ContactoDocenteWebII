@@ -1,0 +1,61 @@
+<div class="container">
+  <!-- Sección Historia, Misión y Visión -->
+  <section id="about-us" class="container">
+    <div class="section-title">
+        <h2>Nuestra Historia, Misión y Visión</h2>
+    </div>
+    <div class="content">
+        <div class="history">
+            <h3><i class="icon book"></i> Historia</h3>
+           
+            <div class="timeline">
+                <div class="event">
+                    <span class="date">1990</span>
+                    <p>Fundada en 1990, Farmacias Salud y Bienestar comenzó como una pequeña botica familiar en el centro de la ciudad, con el objetivo de ofrecer productos farmacéuticos de calidad a precios accesibles. A lo largo de los años, la farmacia ha crecido para convertirse en una cadena reconocida, expandiendo sus servicios para incluir asesoramiento farmacéutico personalizado, productos de bienestar, y atención a domicilio. Nuestro compromiso con la salud de nuestros clientes nos ha permitido establecer relaciones duraderas basadas en la confianza y el servicio excelente.</p>
+                </div>
+                <div class="event">
+                    <span class="date">2005</span>
+                    <p>Expansión a nivel nacional, La primera expanción se realizo en Ambato y fue constituida por varios gerentes 
+                        que se juntaron y se formaron una gran familia.</p>
+                </div>
+                <div class="event">
+                    <span class="date">2024</span>
+                    <p>Liderazgo en el mercado, incentivando y innovando más mercados con medicinas más específicas y de marcas reconocidas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mission-vision">
+            <div class="mission">
+                <h3><i class="icon target"></i> Misión</h3>
+                <p>En Farmacias Salud y Bienestar, nuestra misión es proporcionar soluciones de 
+                    salud y bienestar a nuestros clientes a través de un servicio confiable, 
+                    accesible y personalizado. Nos dedicamos a mejorar la calidad de vida de las 
+                    comunidades a las que servimos, ofreciendo productos farmacéuticos de alta calidad,
+                     atención profesional, y asesoramiento especializado.</p>
+                     
+            </div>
+            <div class="vision">
+                <h3><i class="icon eye"></i> Visión</h3>
+                <p>Nuestra visión es ser la farmacia líder en innovación y servicio en la comunidad, reconocida por nuestro compromiso con la salud y el bienestar de nuestros clientes. Aspiramos a expandir nuestra presencia, incorporando las últimas tecnologías y mejores prácticas para satisfacer las necesidades cambiantes del mercado 
+                    y promover un enfoque integral de la salud.</p>
+                    
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <!-- Sección de Ejecutivos -->
+  <div class="section ejecutivos">
+    <h2>Nuestro Equipo</h2>
+    <div class="cards">
+      <div class="card" *ngFor="let ejecutivo of ejecutivos">
+        <img [src]="ejecutivo.imagen" class="card-img" [alt]="ejecutivo.nombre">
+        <div class="card-body">
+          <h3 class="card-title">{{ ejecutivo.nombre }}</h3>
+          <p class="card-text">{{ ejecutivo.cargo }}</p>
+          <p class="card-description" *ngIf="ejecutivo.descripcion">{{ ejecutivo.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

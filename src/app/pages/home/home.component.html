@@ -1,0 +1,92 @@
+<!-- Imagen Empresarial -->
+<div class="container-fluid text-center my-4">
+  <div class="row justify-content-center">
+      <div class="col-8 col-md-6 col-lg-4">
+          <img [src]="empresaImagen" [alt]="empresaNombre" class="img-fluid rounded shadow" style="max-width: 100%; height: auto;">
+      </div>
+  </div>
+</div>
+<h2 class="text-center mt-5">Ofertas</h2>
+<!-- Carrusel de Ofertas -->
+<div id="ofertasCarousel" class="carousel slide mt-4" data-bs-ride="carousel" style="max-width: 80%; margin: 0 auto;">
+  <div class="carousel-inner">
+      <div *ngFor="let oferta of ofertas; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+          <img [src]="oferta.imagen" class="d-block w-100" [alt]="oferta.nombre" style="max-height: 300px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>{{ oferta.nombre }}</h5>
+              <p>{{ oferta.descripcion }}</p>
+          </div>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#ofertasCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#ofertasCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+  </a>
+</div>
+<h2 class="text-center mt-5">Productos Destacados</h2>
+<!-- Carrusel de Productos -->
+<div id="productosCarousel" class="carousel slide mt-4" data-bs-ride="carousel" style="max-width: 80%; margin: 0 auto;">
+  <div class="carousel-inner">
+      <div *ngFor="let producto of productos; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+          <img [src]="producto.imagen" class="d-block w-100" [alt]="producto.nombre" style="max-height: 300px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>{{ producto.nombre }}</h5>
+              <p>{{ producto.descripcion }}</p>
+              <a [routerLink]="['/producto', producto.id]" class="btn btn-primary">Ver Más</a>
+          </div>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#productosCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#productosCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+  </a>
+</div>
+
+ <!-- Footer -->
+ <footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+              <h4 class="mb-4">Sobre Nosotros</h4>
+              <p>En Tienda Virtual nos especializamos en ofrecer una amplia gama de productos de calidad a precios competitivos. Nuestro compromiso es brindarte una experiencia de compra excepcional y un servicio al cliente impecable.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <h4 class="mb-4">Enlaces Rápidos</h4>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">Inicio</a></li>
+                  <li><a href="/products" class="text-white">Productos</a></li>
+                  <li><a href="/error404" class="text-white">Ofertas</a></li>
+                  <li><a href="/error404" class="text-white">Contacto</a></li>
+                  <li><a href="/error404" class="text-white">FAQ</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+              <h4 class="mb-4">Contacto</h4>
+              <p><i class="fas fa-map-marker-alt"></i> 4 de junio y Fulgencio Araujo, Quito, Ecuador</p>
+              <p><i class="fas fa-phone"></i> +593 984522442</p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@tienda.com" class="text-white">andersonbaez.com</a></p>
+              <div class="social-icons mt-3">
+                  <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="text-center pt-3 border-top border-secondary">
+          <p class="mb-0">&copy; 2024 Tienda Virtual. Todos los derechos reservados.</p>
+      </div>
+  </div>
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+
